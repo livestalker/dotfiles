@@ -1,0 +1,9 @@
+let mapleader=","
+set visualbell
+set noerrorbells
+set ideavimsupport+=singleline
+set surround
+set easymotion
+set number relativenumber
+set scrolloff=3
+inoremap jk <Esc>
