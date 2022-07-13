@@ -31,15 +31,19 @@ echo ">>> Installed Hammerspoon config"
 #
 
 # Grc
-if ! [ -x "$(command -v grc)" ]; then
-    brew install grc
-    echo ">>> Installed grc"
-fi
+#if ! [ -x "$(command -v grc)" ]; then
+#    brew install grc
+#    echo ">>> Installed grc"
+#fi
 
 # Oh-my-zsh
-rm -rf "$HOME/.oh-my-zsh"
-rm "$HOME/.zshrc"
-RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm "$HOME/.zshrc"
-ln -sFfh "$DOTFILES/oh-my-zsh/zshrc" "$HOME/.zshrc"
-echo ">>> Installed zsh config"
+#rm -rf "$HOME/.oh-my-zsh"
+#rm "$HOME/.zshrc"
+#RUNZSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#rm "$HOME/.zshrc"
+#ln -sFfh "$DOTFILES/oh-my-zsh/zshrc" "$HOME/.zshrc"
+#echo ">>> Installed zsh config"
+
+ln -sFfh "$DOTFILES/nvim" "$CONFIG/nvim"
+#nvim +PackerInstall
+echo ">>> Installed nvim config"
