@@ -32,34 +32,34 @@ packer.init({
 
 -- Install your plugins here
 return packer.startup(function(use)
-	use({ "wbthomason/packer.nvim" })
-	use({ "nvim-lua/plenary.nvim" })
-
+	-- Common
+	use({ "wbthomason/packer.nvim" }) -- plugin manager
+	use({ "nvim-lua/plenary.nvim" })  -- lua functions
 	-- Themes
-	use({ "ray-x/starry.nvim" }) -- A pack of modern nvim color schemes.
+	use({ "ray-x/starry.nvim" })  -- A pack of modern nvim color schemes.
 
 	-- LSP
-	use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
-	use({ "neovim/nvim-lspconfig" }) -- Quickstart configs for Nvim LSP
-	use({ "jose-elias-alvarez/null-ls.nvim" }) --Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-	use({ "RRethy/vim-illuminate" })
-	use({ "glepnir/lspsaga.nvim", branch = "main" })
-	use({ "onsails/lspkind.nvim" })
+	--use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
+	--use({ "neovim/nvim-lspconfig" }) -- Quickstart configs for Nvim LSP
+	--use({ "jose-elias-alvarez/null-ls.nvim" }) --Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
+	--use({ "RRethy/vim-illuminate" })
+	--use({ "glepnir/lspsaga.nvim", branch = "main" })
+	--use({ "onsails/lspkind.nvim" })
 
 	-- Treesitter
-	use({ "nvim-treesitter/nvim-treesitter" })
-	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+	--use({ "nvim-treesitter/nvim-treesitter" })
+	--use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
-	-- Completion
-	use({ "hrsh7th/nvim-cmp" }) -- A completion plugin for neovim coded in Lua.
-	use({ "hrsh7th/cmp-buffer" }) -- nvim-cmp source for buffer words.
-	use({ "hrsh7th/cmp-path" }) -- nvim-cmp source for path.
-	use({ "hrsh7th/cmp-nvim-lsp" }) -- nvim-cmp source for neovim builtin LSP client.
-	use({ "hrsh7th/cmp-nvim-lua" }) -- nvim-cmp source for nvim lua.
-	use({ "saadparwaiz1/cmp_luasnip" })
-	use({ "L3MON4D3/LuaSnip" })
-	use({ "rafamadriz/friendly-snippets" })
-	use({ "ray-x/lsp_signature.nvim" })
+	 --Completion
+	--use({ "hrsh7th/nvim-cmp" }) -- A completion plugin for neovim coded in Lua.
+	--use({ "hrsh7th/cmp-buffer" }) -- nvim-cmp source for buffer words.
+	--use({ "hrsh7th/cmp-path" }) -- nvim-cmp source for path.
+	--use({ "hrsh7th/cmp-nvim-lsp" }) -- nvim-cmp source for neovim builtin LSP client.
+	--use({ "hrsh7th/cmp-nvim-lua" }) -- nvim-cmp source for nvim lua.
+	--use({ "saadparwaiz1/cmp_luasnip" })
+	--use({ "L3MON4D3/LuaSnip" })
+	--use({ "rafamadriz/friendly-snippets" })
+	--use({ "ray-x/lsp_signature.nvim" })
 
 	-- Golang
 	--use({ "ray-x/guihua.lua", run = "cd lua/fzy && make" })
@@ -94,7 +94,7 @@ return packer.startup(function(use)
 	--use({ "ThePrimeagen/harpoon" })
 
 	-- Helpers
-	use({ "kyazdani42/nvim-web-devicons" })
+	--use({ "kyazdani42/nvim-web-devicons" })
 	--use({ "windwp/nvim-autopairs" })
 	--use({ "numToStr/Comment.nvim" })
 	--use({ "folke/lsp-colors.nvim" })
