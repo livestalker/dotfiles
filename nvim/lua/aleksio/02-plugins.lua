@@ -37,6 +37,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim" })  -- lua functions
 	-- Themes
 	use({ "ray-x/starry.nvim" })  -- A pack of modern nvim color schemes.
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter" })
@@ -50,6 +51,9 @@ return packer.startup(function(use)
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "goolord/alpha-nvim" })            -- greeter
 	use({ "kdheepak/tabline.nvim" })
+
+	-- Line
+	use({ "nvim-lualine/lualine.nvim" })
 
 	-- LSP
 	--use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
@@ -91,7 +95,6 @@ return packer.startup(function(use)
 	--use({ "numToStr/Comment.nvim" })
 	--use({ "folke/lsp-colors.nvim" })
 	--use({ "lukas-reineke/indent-blankline.nvim" })
-	--use({ "nvim-lualine/lualine.nvim" })
 	--use({ "ahmedkhalf/project.nvim" })
 	--use({ "Shatur/neovim-session-manager" })
 	--use({ "rcarriga/nvim-notify" })
