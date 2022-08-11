@@ -38,6 +38,19 @@ return packer.startup(function(use)
 	-- Themes
 	use({ "ray-x/starry.nvim" })  -- A pack of modern nvim color schemes.
 
+	-- Treesitter
+	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+
+	-- Git
+	use({ "lewis6991/gitsigns.nvim" })
+
+	-- Navigation
+	use({ "kyazdani42/nvim-tree.lua" })
+	use({ "kyazdani42/nvim-web-devicons" })
+	use({ "goolord/alpha-nvim" })            -- greeter
+	use({ "kdheepak/tabline.nvim" })
+
 	-- LSP
 	--use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
 	--use({ "neovim/nvim-lspconfig" }) -- Quickstart configs for Nvim LSP
@@ -45,10 +58,6 @@ return packer.startup(function(use)
 	--use({ "RRethy/vim-illuminate" })
 	--use({ "glepnir/lspsaga.nvim", branch = "main" })
 	--use({ "onsails/lspkind.nvim" })
-
-	-- Treesitter
-	--use({ "nvim-treesitter/nvim-treesitter" })
-	--use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
 	 --Completion
 	--use({ "hrsh7th/nvim-cmp" }) -- A completion plugin for neovim coded in Lua.
@@ -60,19 +69,6 @@ return packer.startup(function(use)
 	--use({ "L3MON4D3/LuaSnip" })
 	--use({ "rafamadriz/friendly-snippets" })
 	--use({ "ray-x/lsp_signature.nvim" })
-
-	-- Golang
-	--use({ "ray-x/guihua.lua", run = "cd lua/fzy && make" })
-	--use({ "ray-x/go.nvim" })
-	--use({
-	--	"edolphin-ydf/goimpl.nvim",
-	--	requires = {
-	--		{ "nvim-lua/plenary.nvim" },
-	--		{ "nvim-lua/popup.nvim" },
-	--		{ "nvim-telescope/telescope.nvim" },
-	--		{ "nvim-treesitter/nvim-treesitter" },
-	--	},
-	--})
 
 	-- Telescope
 	--use({ "nvim-telescope/telescope.nvim" })
@@ -86,15 +82,11 @@ return packer.startup(function(use)
 	--use({ "mrjones2014/legendary.nvim" })
 	--use({ "folke/which-key.nvim" })
 
-	-- Git
-	--use({ "lewis6991/gitsigns.nvim" })
-
 	-- Marks
 	--use({ "chentoast/marks.nvim" })
 	--use({ "ThePrimeagen/harpoon" })
 
 	-- Helpers
-	--use({ "kyazdani42/nvim-web-devicons" })
 	--use({ "windwp/nvim-autopairs" })
 	--use({ "numToStr/Comment.nvim" })
 	--use({ "folke/lsp-colors.nvim" })
@@ -107,10 +99,6 @@ return packer.startup(function(use)
 	--use({ "folke/todo-comments.nvim" })
 	--use({ "kevinhwang91/nvim-bqf" })
 
-	-- Navigation
-	--use({ "kyazdani42/nvim-tree.lua" })
-	--use({ "goolord/alpha-nvim" })
-	--use({ "kdheepak/tabline.nvim" })
 
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

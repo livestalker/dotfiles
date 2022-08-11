@@ -7,3 +7,4 @@ set easymotion
 set number relativenumber
 set scrolloff=3
 inoremap jk <Esc>
+set NERDTree

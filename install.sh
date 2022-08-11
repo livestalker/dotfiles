@@ -4,8 +4,8 @@ DOTFILES="$HOME/.dotfiles"
 CONFIG="$HOME/.config"
 PYNVIMENVDIR="$HOME/.pyenv"
 
-mkdir -p $CONFIG
-mkdir -p $PYNVIMENVDIR
+mkdir -p "$CONFIG"
+mkdir -p "$PYNVIMENVDIR"
 
 #
 # Git
