@@ -37,6 +37,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim" })  -- lua functions
 	-- Themes
 	use({ "ray-x/starry.nvim" })  -- A pack of modern nvim color schemes.
+	use({ "folke/tokyonight.nvim" })
 	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	-- Treesitter
@@ -54,6 +55,21 @@ return packer.startup(function(use)
 
 	-- Line
 	use({ "nvim-lualine/lualine.nvim" })
+
+	-- Telescope
+	use({ "nvim-telescope/telescope.nvim" })
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	})
+	use({ "stevearc/dressing.nvim" }) -- Use telescope for pickers
+
+	-- DAP
+	--use({ "mfussenegger/nvim-dap" })
+	--use({ "leoluz/nvim-dap-go" })
+	--use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
+	--use({ "theHamsta/nvim-dap-virtual-text" })
+	--use({ "nvim-telescope/telescope-dap.nvim" })
 
 	-- LSP
 	--use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
@@ -74,13 +90,6 @@ return packer.startup(function(use)
 	--use({ "rafamadriz/friendly-snippets" })
 	--use({ "ray-x/lsp_signature.nvim" })
 
-	-- Telescope
-	--use({ "nvim-telescope/telescope.nvim" })
-	--use({
-	--	"nvim-telescope/telescope-fzf-native.nvim",
-	--	run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-	--})
-	--use({ "stevearc/dressing.nvim" }) -- Use telescope for pickers
 
 	-- Keymaps
 	--use({ "mrjones2014/legendary.nvim" })
@@ -95,8 +104,8 @@ return packer.startup(function(use)
 	--use({ "numToStr/Comment.nvim" })
 	--use({ "folke/lsp-colors.nvim" })
 	--use({ "lukas-reineke/indent-blankline.nvim" })
-	--use({ "ahmedkhalf/project.nvim" })
-	--use({ "Shatur/neovim-session-manager" })
+	use({ "ahmedkhalf/project.nvim" })
+	use({ "Shatur/neovim-session-manager" })
 	--use({ "rcarriga/nvim-notify" })
 	--use({ "numToStr/FTerm.nvim" })
 	--use({ "folke/todo-comments.nvim" })
