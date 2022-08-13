@@ -64,6 +64,10 @@ return packer.startup(function(use)
 	})
 	use({ "stevearc/dressing.nvim" }) -- Use telescope for pickers
 
+	-- Keymaps
+	use({ "mrjones2014/legendary.nvim" }) -- legend for your keymaps, commands, and autocmds
+	use({ "folke/which-key.nvim" }) -- create key bindings that stick
+
 	-- DAP
 	--use({ "mfussenegger/nvim-dap" })
 	--use({ "leoluz/nvim-dap-go" })
@@ -91,9 +95,6 @@ return packer.startup(function(use)
 	--use({ "ray-x/lsp_signature.nvim" })
 
 
-	-- Keymaps
-	--use({ "mrjones2014/legendary.nvim" })
-	--use({ "folke/which-key.nvim" })
 
 	-- Marks
 	--use({ "chentoast/marks.nvim" })
@@ -107,9 +108,10 @@ return packer.startup(function(use)
 	use({ "ahmedkhalf/project.nvim" })
 	use({ "Shatur/neovim-session-manager" })
 	--use({ "rcarriga/nvim-notify" })
-	--use({ "numToStr/FTerm.nvim" })
+	use({ "voldikss/vim-floaterm" })
+    use({ "famiu/bufdelete.nvim" })
 	--use({ "folke/todo-comments.nvim" })
-	--use({ "kevinhwang91/nvim-bqf" })
+	use({ "kevinhwang91/nvim-bqf" })
 
 
 	-- Put this at the end after all plugins
