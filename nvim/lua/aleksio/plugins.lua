@@ -1,5 +1,6 @@
 local fn = vim.fn
 
+
 -- Automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -66,7 +67,16 @@ return packer.startup(function(use)
 
 	-- Keymaps
 	use({ "mrjones2014/legendary.nvim" }) -- legend for your keymaps, commands, and autocmds
-	use({ "folke/which-key.nvim" }) -- create key bindings that stick
+--	use({ "folke/which-key.nvim" }) -- create key bindings that stick
+
+	-- LSP
+    use({"williamboman/mason.nvim"})           -- easily install and manage LSP servers, DAP servers, linters, and formatters
+    use({"williamboman/mason-lspconfig.nvim"}) -- extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+	use({ "neovim/nvim-lspconfig" })           -- quickstart configs for Nvim LSP
+	use({ "RRethy/vim-illuminate" })           -- automatically highlighting other uses of the word under the cursor
+--	use({ "jose-elias-alvarez/null-ls.nvim" }) -- use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
+--	use({ "glepnir/lspsaga.nvim", branch = "main" })
+--	use({ "onsails/lspkind.nvim" })
 
 	-- DAP
 	--use({ "mfussenegger/nvim-dap" })
@@ -75,13 +85,6 @@ return packer.startup(function(use)
 	--use({ "theHamsta/nvim-dap-virtual-text" })
 	--use({ "nvim-telescope/telescope-dap.nvim" })
 
-	-- LSP
-	--use({ "williamboman/nvim-lsp-installer" }) -- Neovim plugin that allow you to seamlessly manage LSP servers with :LspInstall.
-	--use({ "neovim/nvim-lspconfig" }) -- Quickstart configs for Nvim LSP
-	--use({ "jose-elias-alvarez/null-ls.nvim" }) --Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
-	--use({ "RRethy/vim-illuminate" })
-	--use({ "glepnir/lspsaga.nvim", branch = "main" })
-	--use({ "onsails/lspkind.nvim" })
 
 	 --Completion
 	--use({ "hrsh7th/nvim-cmp" }) -- A completion plugin for neovim coded in Lua.
@@ -93,8 +96,6 @@ return packer.startup(function(use)
 	--use({ "L3MON4D3/LuaSnip" })
 	--use({ "rafamadriz/friendly-snippets" })
 	--use({ "ray-x/lsp_signature.nvim" })
-
-
 
 	-- Marks
 	--use({ "chentoast/marks.nvim" })
