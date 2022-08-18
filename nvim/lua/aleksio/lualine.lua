@@ -4,7 +4,9 @@ require("lualine").setup({
     theme = "catppuccin",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    disabled_filetypes = {},
+    disabled_filetypes = {
+      statusline = { "NvimTree" },
+    },
     always_divide_middle = true,
     globalstatus = false,
   },

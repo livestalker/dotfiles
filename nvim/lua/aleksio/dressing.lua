@@ -38,7 +38,11 @@ require("dressing").setup({
     end,
 
     -- see :help dressing_get_config
-    get_config = nil,
+    get_config = function()
+      if vim.api.nvim_buf_get_option(0, "filetype") == "NvimTree" then
+        return { enabled = false }
+      end
+    end,
   },
   select = {
     -- Set to false to disable the vim.ui.select implementation

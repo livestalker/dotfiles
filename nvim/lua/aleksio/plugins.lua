@@ -48,8 +48,13 @@ return packer.startup(function(use)
   use({ "lewis6991/gitsigns.nvim" })
 
   -- Navigation
-  use({ "kyazdani42/nvim-tree.lua" })
-  use({ "kyazdani42/nvim-web-devicons" })
+  use({
+    "kyazdani42/nvim-tree.lua",
+    requires = {
+      "kyazdani42/nvim-web-devicons",
+    },
+    tag = "nightly",
+  })
   use({ "goolord/alpha-nvim" }) -- greeter
   use({ "kdheepak/tabline.nvim" })
 
@@ -66,7 +71,6 @@ return packer.startup(function(use)
 
   -- Keymaps
   use({ "mrjones2014/legendary.nvim" }) -- legend for your keymaps, commands, and autocmds
-  --	use({ "folke/which-key.nvim" }) -- create key bindings that stick
 
   -- LSP
   use({ "williamboman/mason.nvim" }) -- easily install and manage LSP servers, DAP servers, linters, and formatters
