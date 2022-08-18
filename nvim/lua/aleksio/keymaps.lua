@@ -3,10 +3,10 @@ require("legendary").setup()
 local opts = { noremap = true, silent = true }
 
 -- Nvim-tree
-vim.keymap.set('n', "<C-n>", "<cmd> NvimTreeToggle<CR>")
-vim.keymap.set('n', "<F3>", "<cmd> NvimTreeToggle<CR>")
-vim.keymap.set('n', "<leader>e", "<cmd> NvimTreeFocus<CR>")
-vim.keymap.set('n', "<leader>f", "<cmd> NvimTreeFindFile<CR>")
+vim.keymap.set("n", "<C-n>", "<cmd> NvimTreeToggle<CR>")
+vim.keymap.set("n", "<F3>", "<cmd> NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd> NvimTreeFocus<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd> NvimTreeFindFile<CR>")
 
 -- Show / search keymaps
 vim.keymap.set("n", "<Leader>km", "<cmd>Legendary keymaps<CR>")
@@ -24,30 +24,29 @@ vim.keymap.set("n", "<Leader>fc", "<cmd>Telescope colorscheme<CR>")
 vim.keymap.set("n", "<space>e", vim.diagnostic.open_float, opts)
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+vim.keymap.set("n", "<space>q", vim.diagnostic.setloclist, opts)
 
 local keymaps_module = {}
 keymaps_module.lsp_mapping = function(client, bufnr)
-    local bufopts = { noremap = true, silent = true, buffer = bufnr }
-    --    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    --    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    --    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-    --    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-    --    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-    --    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-    --    vim.keymap.set('n', '<space>wl', function()
-    --        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    --    end, bufopts)
-    --    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-    --    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-    --    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', '<C-l>', vim.lsp.buf.formatting, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<leader>gr', "<cmd>Telescope lsp_references<CR>", bufopts)
-    vim.keymap.set('n', '<F7>', "<cmd>Telescope treesitter<CR>", bufopts)
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
+  --    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
+  --    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  --    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
+  --    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
+  --    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+  --    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+  --    vim.keymap.set('n', '<space>wl', function()
+  --        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  --    end, bufopts)
+  --    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
+  --    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
+  --    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
+  vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+  vim.keymap.set("n", "<C-l>", vim.lsp.buf.format, bufopts)
+  vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+  vim.keymap.set("n", "<leader>gr", "<cmd>Telescope lsp_references<CR>", bufopts)
+  vim.keymap.set("n", "<F7>", "<cmd>Telescope treesitter<CR>", bufopts)
 end
-
 
 --	["gD"] = { "<cmd> Telescope lsp_type_definitions<CR>", "Type definition" },
 --	["gd"] = { "<cmd> Telescope lsp_definitions<CR>", "Definition" },
@@ -93,12 +92,10 @@ end
 --}, { mode = "v" })
 --
 
-
 -- Bufdelete
 -- Remap bd to Bdelete to close buffer and preserve it's window
 vim.cmd("cnoreabbrev bd Bdelete")
 vim.cmd("cnoreabbrev bdelete Bdelete")
-
 
 -- Avoid neovim bug when it refuses to close when there are terminal buffers
 --vim.cmd("command Z wa | qa")
