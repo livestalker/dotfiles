@@ -1,55 +1,87 @@
-vim.g.mapleader = ","
-vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
-vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8" -- the encoding written to a file
+local set = vim.opt
+
 vim.cmd("language en_US.UTF-8")
-vim.opt.hlsearch = true -- highlight all matches on previous search pattern
-vim.opt.ignorecase = true -- ignore case in search patterns
-vim.opt.smartcase = true
-vim.opt.mouse = "a" -- allow the mouse to be used in neovim
-vim.opt.pumheight = 10 -- pop up menu height
-vim.opt.showmode = false -- we don't need to see things like -- INSERT -- anymore
-vim.opt.showtabline = 0 -- never show tabs
-vim.opt.smartindent = true -- make indenting smarter again
-vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
-vim.opt.timeoutlen = 1000 -- time to wait for a mapped sequence to complete (in milliseconds)
-vim.opt.expandtab = true -- convert tabs to spaces
-vim.opt.laststatus = 3 -- always and only one line
-vim.opt.showcmd = false -- do not show cmd
-vim.opt.ruler = false -- do not show line and column number
-vim.opt.numberwidth = 4 -- set number column width to 2 {default 4}
-vim.opt.signcolumn = "yes" -- always show the sign column, otherwise it would shift the text each time
-vim.opt.wrap = false -- display lines as one long line
-vim.opt.scrolloff = 8 -- minimal number of screen lines to keep above and below the cursor
-vim.opt.sidescrolloff = 8 -- minimal number of screen lines to keep above and below the cursor
-vim.opt.fillchars = { eob = "~" }
-vim.opt.shortmess:append("c")
-vim.opt.whichwrap:append("<,>,[,],h,l")
-vim.opt.iskeyword:append("-")
-vim.opt.linebreak = true
-vim.opt.showbreak = ">"
-vim.opt.autowrite = true
-vim.opt.autowriteall = true
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.autochdir = true
-vim.opt.list = true
-vim.opt.listchars = "tab:» ,trail:·,extends:>,precedes:<"
-vim.opt.confirm = true
-vim.opt.showmatch = true
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.shiftround = true
-vim.opt.backup = false
-vim.opt.writebackup = false
-vim.opt.swapfile = false
-vim.opt.undofile = true
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.textwidth = 120
-vim.opt.cursorline = true
-vim.opt.cursorcolumn = true
-vim.opt.updatetime = 100
+vim.cmd("filetype plugin indent on")
+vim.g.mapleader = ","
+
+-- 2 moving around, searching and patterns
+set.autochdir = true
+set.ignorecase = true
+set.incsearch = true
+set.smartcase = true
+
+-- 4 display text
+set.cmdheight = 1
+set.list = true
+set.listchars="tab:> ,multispace:·,leadmultispace:·,trail:·,extends:>,precedes:<"
+set.numberwidth = 4
+set.number = true
+set.relativenumber = true
+set.scrolloff = 4
+set.sidescroll = 1
+set.sidescrolloff = 4
+set.wrap = false
+set.fillchars = { eob = "~" }
+
+--5 syntax, highlighting and spelling.
+set.cursorline = true
+set.cursorlineopt = "both"
+set.hlsearch = true
+set.termguicolors = true
+
+--6 multiple windows
+set.hidden = true
+set.laststatus = 3
+set.splitbelow = true
+set.splitright = true
+set.winheight = 10
+set.winwidth = 10
+
+--7 multiple tab pages
+set.showtabline = 0
+
+--9 using the mouse
+set.mouse = "a"
+
+--10 messages and info
+set.confirm = true
+set.ruler = false
+set.showcmd = false
+set.showmode = false
+set.shortmess:append("c")
+
+--12 editing text
+set.completeopt = { "menuone", "noselect" }
+set.pumheight = 10
+set.showmatch = true
+set.textwidth = 120
+set.undofile = true
+
+--13 tabs and indenting
+set.expandtab = true
+set.shiftwidth = 4
+set.shiftround = true
+set.smartindent = true
+set.softtabstop = 4
+set.tabstop = 4
+
+--17 reading and writing files
+set.autowrite = true
+set.autowriteall = true
+set.backup = false
+set.writebackup = true
+
+--18 the swap file
+set.updatetime = 1000
+
+--19 command line editing
+set.history = 50
+
+--22 language specific
+set.iskeyword:append("-")
+
+--23 multi-byte characters
+set.fileencoding = "utf-8"
+
+-- 24 various
+set.signcolumn = "yes"
