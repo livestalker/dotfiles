@@ -2,7 +2,13 @@ local set = vim.opt
 
 vim.cmd("language en_US.UTF-8")
 vim.cmd("filetype plugin indent on")
+vim.cmd.colorscheme("tokyonight")
 vim.g.mapleader = ","
+
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 30
+
+-- :options
 
 -- 2 moving around, searching and patterns
 set.autochdir = true
@@ -13,7 +19,7 @@ set.smartcase = true
 -- 4 display text
 set.cmdheight = 1
 set.list = true
-set.listchars="tab:> ,multispace:·,leadmultispace:·,trail:·,extends:>,precedes:<"
+set.listchars="tab:> ,trail:·,extends:>,precedes:<"
 set.numberwidth = 4
 set.number = true
 set.relativenumber = true

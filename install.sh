@@ -10,21 +10,21 @@ mkdir -p "$PYNVIMENVDIR"
 #
 # Git
 #
-brew install git git-flow-avh
-ln -sFfh "$DOTFILES/git" "$CONFIG/git"
-echo ">>> Installed git config"
+#brew install git git-flow-avh
+#ln -sFfh "$DOTFILES/git" "$CONFIG/git"
+#echo ">>> Installed git config"
 
 #
 # IdeaVIM
 #
-ln -sFfh "$DOTFILES/ideavimrc" "$HOME/.ideavimrc"
-echo ">>> Installed .ideavimrc"
+#ln -sFfh "$DOTFILES/ideavimrc" "$HOME/.ideavimrc"
+#echo ">>> Installed .ideavimrc"
 
 #
 # Hammerspoon
 #
-ln -sFfh "$DOTFILES/hammerspoon" "$HOME/.hammerspoon"
-echo ">>> Installed Hammerspoon config"
+#ln -sFfh "$DOTFILES/hammerspoon" "$HOME/.hammerspoon"
+#echo ">>> Installed Hammerspoon config"
 
 #
 # Zsh
