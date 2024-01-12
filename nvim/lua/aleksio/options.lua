@@ -4,6 +4,15 @@ vim.cmd("language en_US.UTF-8")
 vim.cmd("filetype plugin indent on")
 vim.g.mapleader = ","
 
+--vim.g.netrw_banner = 0
+--vim.g.netrw_winsize = 30
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+vim.opt.termguicolors = true
+
+-- :options
+
 -- 2 moving around, searching and patterns
 set.autochdir = true
 set.ignorecase = true
@@ -13,7 +22,8 @@ set.smartcase = true
 -- 4 display text
 set.cmdheight = 1
 set.list = true
-set.listchars="tab:> ,multispace:·,leadmultispace:·,trail:·,extends:>,precedes:<"
+set.listchars = { tab ='> ', trail = '.', extends = '>', precedes = '<' }
+
 set.numberwidth = 4
 set.number = true
 set.relativenumber = true
