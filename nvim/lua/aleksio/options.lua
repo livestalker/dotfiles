@@ -2,7 +2,6 @@ local set = vim.opt
 
 vim.cmd("language en_US.UTF-8")
 vim.cmd("filetype plugin indent on")
-vim.cmd.colorscheme("tokyonight")
 vim.g.mapleader = ","
 
 vim.g.netrw_banner = 0

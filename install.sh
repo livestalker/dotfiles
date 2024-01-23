@@ -44,6 +44,7 @@ mkdir -p "$PYNVIMENVDIR"
 #ln -sFfh "$DOTFILES/oh-my-zsh/zshrc" "$HOME/.zshrc"
 #echo ">>> Installed zsh config"
 
+brew install ripgrep
 ln -sFfh "$DOTFILES/nvim" "$CONFIG/nvim"
 #nvim +PackerInstall
 echo ">>> Installed nvim config"

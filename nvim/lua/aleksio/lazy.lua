@@ -27,17 +27,4 @@ end
 
 lazy.path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 lazy.opts = {}
-
-lazy.setup({
-    {'folke/tokyonight.nvim', lazy=false, priority=1000, opts={}},
-    {'nvim-lualine/lualine.nvim'},
-    {'lukas-reineke/indent-blankline.nvim', main='ibl', opts={}},
-    {'nvim-treesitter/nvim-treesitter', build=':TSUpdate'},
-    {'numToStr/Comment.nvim', lazy=false, opts={}},
-    {
-        'nvim-tree/nvim-tree.lua', 
-        version='*', 
-        lazy=false, 
-        dependencies={"nvim-tree/nvim-web-devicons"}
-    }
-})
+lazy.setup('plugins')
