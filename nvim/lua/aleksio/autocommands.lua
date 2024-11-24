@@ -31,11 +31,13 @@ api.nvim_create_autocmd({ 'BufLeave', 'FocusLost', 'InsertEnter', 'CmdlineEnter'
     end,
 })
 
-local nospell_group = api.nvim_create_augroup('nospell', { clear = true })
+local terminal = api.nvim_create_augroup('terminal', { clear = true })
 api.nvim_create_autocmd('TermOpen', {
-    group = nospell_group,
+    group = terminal,
     callback = function()
-        vim.wo[0].spell = false
+        vim.wo[0].spell = false -- turn off spell checking
+        local opts = {buffer = 0, silent = true}
+        vim.keymap.set('t', '<F12>', [[<C-\><C-n>]], opts)
     end,
 })
 
