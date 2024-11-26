@@ -36,7 +36,7 @@ api.nvim_create_autocmd('TermOpen', {
     group = terminal,
     callback = function()
         vim.wo[0].spell = false -- turn off spell checking
-        local opts = {buffer = 0, silent = true}
+        local opts = { buffer = 0, silent = true }
         vim.keymap.set('t', '<F12>', [[<C-\><C-n>]], opts)
     end,
 })
@@ -53,5 +53,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
         if client.server_capabilities.documentSymbolProvider then
             require('nvim-navic').attach(client, bufnr)
         end
+
+        vim.keymap.set('n', '<leader>cl', '<cmd>checkhealth lsp<cr>', { buffer = ev.buf, desc = 'lsp: [c]heckhealh [l]sp' })
+        vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = ev.buf, desc = 'lsp: [g]oto [d]efinition' })
+        vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = ev.buf, desc = 'lsp: [g]oto [D]eclaration' })
+        vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition,
+            { buffer = ev.buf, desc = 'lsp: [g]oto [t]type definition' })
+        vim.keymap.set({ 'n', 'v' }, '<space>f', function()
+            vim.lsp.buf.format({ async = true })
+        end, { buffer = ev.buf, desc = 'lsp: [f]ormat' })
     end
 })
