@@ -37,7 +37,8 @@ api.nvim_create_autocmd('TermOpen', {
     callback = function()
         vim.wo[0].spell = false -- turn off spell checking
         local opts = { buffer = 0, silent = true }
-        vim.keymap.set('t', '<F12>', [[<C-\><C-n>]], opts)
+        vim.keymap.set('t', '<F12>', [[<C-\><C-n>]], opts) -- exit from terminal mode
+        vim.keymap.set('n', '<esc>', [[<C-W><C-P>]], opts) -- jump to previouse window
     end,
 })
 

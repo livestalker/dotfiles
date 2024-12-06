@@ -31,6 +31,7 @@ vim.api.nvim_create_autocmd('FileType', {
                         library = {
                             vim.env.VIMRUNTIME,
                             plugin_path("nvim-tree.lua"),
+                            plugin_path("toggleterm.nvim"),
                             -- "${3rd}/luv/library",
                             -- "${3rd}/busted/library",
                         }

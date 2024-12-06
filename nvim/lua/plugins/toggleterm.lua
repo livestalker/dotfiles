@@ -10,7 +10,7 @@ return {
                     return vim.o.columns / 2
                 end
             end,
-            open_mapping = "<F12>",
+            --open_mapping = "<F12>",
             hide_numbers = true,
             terminal_mappings = false,
             persist_mode = false
